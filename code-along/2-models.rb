@@ -13,8 +13,35 @@ Company.destroy_all
 
 # 1a. check out the schema file
 # 1b. check out the model file
+# puts "There are #{Company.all.count} companies"
 
 # 2. insert new rows in companies table
+new_row_companies_table = Company.new
+    new_row_companies_table["name"] = "Apple"
+    new_row_companies_table["city"] = "Cupertino"
+    new_row_companies_table["state"] ="CA"
+    new_row_companies_table["url"] = "https://apple.com"
+new_row_companies_table.save
+
+new_row_companies_table = Company.new
+    new_row_companies_table["name"] = "Amazon"
+    new_row_companies_table["city"] = "Seattle"
+    new_row_companies_table["state"] = "WA"
+new_row_companies_table.save
+
+new_row_companies_table = Company.new
+    new_row_companies_table["name"] = "Twitter"
+    new_row_companies_table["city"] = "San Francisco"
+    new_row_companies_table["state"] = "CA"
+new_row_companies_table.save
+
+
+# p new_row_companies_table
+# p Company.all.count
+
+
+# puts new_row_companies_table
+# p new_row_companies_table
 
 # 3. query companies table to find all row with California company
 
