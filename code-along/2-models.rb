@@ -54,13 +54,23 @@ new_row_companies_table.save
 
 # 4. query companies table to find single row for Apple
 get_apple = Company.where({"name" => "Apple"})
-p get_apple
+# p get_apple
 
 get_apple = Company.find_by({"name" => "Apple"})
-p get_apple
+# p get_apple
 
 # 5. read a row's column value
+# p get_apple["name"]
+# p get_apple["city"]
+# p get_apple["state"]
+# p get_apple["url"]
+# p get_apple["id"]
 
 # 6. update a row's column value
-
+get_twitter = Company.find_by({"name" => "Twitter"})
+p get_twitter
+get_twitter["url"] = "https://twitter.com"
+get_twitter["name"] = "X (Formerly Twitter)"
+get_twitter.save
+p get_twitter
 # 7. delete a row
