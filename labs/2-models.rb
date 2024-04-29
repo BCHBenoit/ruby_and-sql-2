@@ -56,14 +56,14 @@ get_row_benoit.save
 
 #Lo que tengo que hacer es un for loop que vaya a traves de todos los rows del array salespeople
 
-#1. Para eso primero selecciono toda la tabla:
+#Paso 1. Para eso primero selecciono toda la tabla:
 select_all_salespeople_table = Salesperson.all
 
-#2. Defino el variable que voy a crear para que que tome los valores segun el for loop va iterando
+#Paso 2. Defino el variable que voy a crear para que que tome los valores segun el for loop va iterando
 # por cada row:
 salespeople_row = 0
 
-#3 creo el for loop
+#Paso 3. creo el for loop
 for salespeople_row in select_all_salespeople_table
     salespeople_row
     p salespeople_row
@@ -72,7 +72,7 @@ end
 # en la primera vuelta va tomar el valor Salespeople[0], en la segunda va a tomar el valor de
 # Salespeople[1] y asi. Y con P salespeople_row lo va a ir imprimiendo.
 
-#4. Pero como solo me piden el full name de los salespeople, es decir las columnas first_name y
+#Paso 4. Pero como solo me piden el full name de los salespeople, es decir las columnas first_name y
 # last_name, y no todo el array (es decir todas las columnas del hash), ahora tengo que solo
 # mostrar esa informacion:
 for salespeople_row in select_all_salespeople_table
