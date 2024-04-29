@@ -44,7 +44,19 @@ new_row_contacts_table = Contact.new
 new_row_contacts_table.save
 
 # 2. How many contacts work at Apple?
-
-
+get_contacts_table = Contact.all
+get_contacts_work_at_apple = get_contacts_table.where({"company_id" => get_apple_id})
+p get_contacts_work_at_apple.count
 
 # 3. What is the full name of each contact who works at Apple?
+get_contacts_table = Contact.all
+get_contacts_work_at_apple = get_contacts_table.where({"company_id" => get_apple_id})
+apple_row = 0
+
+for apple_row in get_contacts_work_at_apple
+    apple_row["first_name"]
+    apple_row["last_name"]
+    p "#{apple_row["first_name"]} #{apple_row["last_name"]}"
+end
+
+
