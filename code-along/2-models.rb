@@ -74,3 +74,6 @@ get_twitter["name"] = "X (Formerly Twitter)"
 get_twitter.save
 p get_twitter
 # 7. delete a row
+get_X_formerly_twitter = Company.find_by({"name" => "X (Formerly Twitter)"})
+p get_X_formerly_twitter
+get_X_formerly_twitter.destroy
