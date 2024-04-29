@@ -44,8 +44,20 @@ new_row_companies_table.save
 # p new_row_companies_table
 
 # 3. query companies table to find all row with California company
+# get_all_table_companies = Company.all
+# p get_all_table_companies
+
+# get_california_companies = Company.where({"state" => "CA"})
+# p get_california_companies
+
+# puts get_california_companies.count
 
 # 4. query companies table to find single row for Apple
+get_apple = Company.where({"name" => "Apple"})
+p get_apple
+
+get_apple = Company.find_by({"name" => "Apple"})
+p get_apple
 
 # 5. read a row's column value
 
