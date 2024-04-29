@@ -12,6 +12,39 @@ Contact.destroy_all
 
 # 1. insert new rows in the contacts table with relationship to a company
 
+get_companies_table = Company.all
+get_apple_row = get_companies_table.find_by({"name" => "Apple"})
+get_apple_id = get_apple_row["id"]
+p get_apple_id
+
+new_row_contacts_table = Contact.new
+    new_row_contacts_table["first_name"] = "Tim"
+    new_row_contacts_table["last_name"] = "Cook"
+    new_row_contacts_table["email"] = "tim@apple.com"
+    new_row_contacts_table["company_id"] = get_apple_id
+new_row_contacts_table.save
+
+new_row_contacts_table = Contact.new
+    new_row_contacts_table["first_name"] = "Craig"
+    new_row_contacts_table["last_name"] = "Federighi"
+    new_row_contacts_table["email"] = "craig@apple.com"
+    new_row_contacts_table["company_id"] = get_apple_id
+new_row_contacts_table.save
+
+
+get_companies_table = Company.all
+get_amazon_row = get_companies_table.find_by({"name" => "Amazon"})
+get_amazon_id = get_amazon_row["id"]
+
+new_row_contacts_table = Contact.new
+    new_row_contacts_table["first_name"] = "Jeff"
+    new_row_contacts_table["last_name"] = "Bezos"
+    new_row_contacts_table["email"] = "jeff@amazon.com"
+    new_row_contacts_table["company_id"] = get_amazon_id
+new_row_contacts_table.save
+
 # 2. How many contacts work at Apple?
+
+
 
 # 3. What is the full name of each contact who works at Apple?
